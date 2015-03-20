@@ -61,7 +61,7 @@ namespace FTPboxLib
         /// <returns></returns>
         public static string FormatDate(this DateTime date)
         {
-            return (date.Date == DateTime.Today) ? date.ToString("HH:mm") : date.ToString("MM-dd-yy");
+            return (date.Date == DateTime.Today) ? date.ToString("HH:mm") : date.ToString("dd-MM-yyy");
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace FTPboxLib
         /// </summary>
         public static DateTime LatestChangeTime(this FileLogItem item)
         {
-            return DateTime.Compare(item.Remote, item.Local) < 0 ? item.Remote : item.Local;
+            return DateTime.Compare(item.Remote, item.Local) > 0 ? item.Remote : item.Local;
         }
 
         /// <summary>
@@ -95,6 +95,14 @@ namespace FTPboxLib
         /// Only invoke the EventHandler if it isn't null, to prevent exceptions
         /// </summary>
         public static void SafeInvoke<TEventArgs>(this EventHandler handler, object sender, TEventArgs args) where TEventArgs : EventArgs
+        {
+            if (handler != null) handler(sender, args);
+        }
+
+        /// <summary>
+        /// Safely invoke handler with specified type of EventArgs
+        /// </summary>
+        public static void SafeInvoke<TEventArgs>(this EventHandler<TEventArgs> handler, object sender, TEventArgs args) where TEventArgs : EventArgs
         {
             if (handler != null) handler(sender, args);
         }

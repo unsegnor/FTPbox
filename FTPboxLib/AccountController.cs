@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace FTPboxLib
 {
@@ -51,22 +52,19 @@ namespace FTPboxLib
 
         /// <summary>
         /// Order the Files list by last time of change and
-        /// return the first 5 items in the list
+        /// return the first 10 items in the list
         /// </summary>        
         public List<FileLogItem> RecentList
         {
             get
             {
-                var recent = new List<FileLogItem>(FileLog.Files);
-                recent.Sort((x, y) => DateTime.Compare(x.LatestChangeTime(), y.LatestChangeTime()));
+                Log.Write(l.Client, "{0} items in RecentList", FileLog.Files.Count);
 
-                recent.Reverse();
-                Log.Write(l.Client, "{0} items in RecentList", recent.Count);
-
-                if (recent.Count > 5)
-                    return recent.GetRange(0, 5);
-                else
-                    return recent;
+                return FileLog.Files
+                    .Where(x => File.Exists(Path.Combine(Paths.Local, x.CommonPath)))
+                    .OrderByDescending(x => x.LatestChangeTime())
+                    .Take(10)
+                    .ToList();
             }
         }
 
@@ -163,7 +161,7 @@ namespace FTPboxLib
                 || cpath.Contains("webint") || aName == "." || aName == ".."                            //web interface, current and parent folders are ignored
                 || aName == ".ftpquota" || aName == "error_log" || aName.StartsWith(".bash")            //server files are ignored
                 || !Common.IsAllowedFilename(aName)                                                     //checks characters not allowed in windows file/folder names
-                || aName.StartsWith("~ftpb_")                                                           //FTPbox-generated temporary files are ignored
+                || aName.StartsWith(Account.TempFilePrefix)                                             //FTPbox-generated temporary files are ignored
                 );
 
             return b;

@@ -26,9 +26,6 @@ namespace FTPboxLib
         [JsonProperty]
         public List<string> Folders { get; private set; }
 
-        // An event used from the main form to refresh the recent files list
-	    public event EventHandler FileLogChanged;
-
         private AccountController controller;
 
         public FileLog(AccountController account)
@@ -58,9 +55,8 @@ namespace FTPboxLib
                 Remote = controller.Client.GetLwtOf(file.NewCommonPath)
             });
 
-            FileLogChanged.SafeInvoke(null, EventArgs.Empty);
-
             Settings.SaveProfile();
+            Notifications.ChangeRecentList();
         }
 
         /// <summary>
@@ -74,6 +70,7 @@ namespace FTPboxLib
 	            Files.Remove(fi);
 
 	        Log.Write(l.Debug, "*** Removed from Log: {0}", path);
+            Notifications.ChangeRecentList();
 	    }
 
         /// <summary>
@@ -109,6 +106,7 @@ namespace FTPboxLib
 	        if (Folders.Contains(cpath))
 	            Folders.Remove(cpath);
 	        Settings.SaveProfile();
+            Notifications.ChangeRecentList();
         }
 
         public DateTime getLocal(string path)

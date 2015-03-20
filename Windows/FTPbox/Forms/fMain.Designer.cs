@@ -112,12 +112,6 @@
             this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.recentFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.SyncToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -195,8 +189,8 @@
             // 
             // cLanguages
             // 
-            this.cLanguages.AccessibleDescription = "";
-            this.cLanguages.AccessibleName = "Encryption";
+            this.cLanguages.AccessibleDescription = "select the language of the application";
+            this.cLanguages.AccessibleName = "Language";
             this.cLanguages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cLanguages.FormattingEnabled = true;
             this.cLanguages.Items.AddRange(new object[] {
@@ -286,6 +280,7 @@
             // 
             // chkShellMenus
             // 
+            this.chkShellMenus.AccessibleName = "add program to windows right click menu";
             this.chkShellMenus.Location = new System.Drawing.Point(9, 88);
             this.chkShellMenus.Name = "chkShellMenus";
             this.chkShellMenus.Size = new System.Drawing.Size(434, 17);
@@ -296,6 +291,7 @@
             // 
             // bBrowseLogs
             // 
+            this.bBrowseLogs.AccessibleDescription = "opens the debug log file";
             this.bBrowseLogs.Location = new System.Drawing.Point(191, 61);
             this.bBrowseLogs.Name = "bBrowseLogs";
             this.bBrowseLogs.Size = new System.Drawing.Size(89, 23);
@@ -306,6 +302,7 @@
             // 
             // chkEnableLogging
             // 
+            this.chkEnableLogging.AccessibleName = "enable logging";
             this.chkEnableLogging.Location = new System.Drawing.Point(9, 65);
             this.chkEnableLogging.Name = "chkEnableLogging";
             this.chkEnableLogging.Size = new System.Drawing.Size(434, 17);
@@ -357,6 +354,7 @@
             // 
             // bRemoveAccount
             // 
+            this.bRemoveAccount.AccessibleName = "Remove this account";
             this.bRemoveAccount.Location = new System.Drawing.Point(380, 10);
             this.bRemoveAccount.Name = "bRemoveAccount";
             this.bRemoveAccount.Size = new System.Drawing.Size(75, 23);
@@ -367,6 +365,7 @@
             // 
             // bAddAccount
             // 
+            this.bAddAccount.AccessibleName = "Add a new account";
             this.bAddAccount.Location = new System.Drawing.Point(299, 10);
             this.bAddAccount.Name = "bAddAccount";
             this.bAddAccount.Size = new System.Drawing.Size(75, 23);
@@ -377,7 +376,7 @@
             // 
             // cProfiles
             // 
-            this.cProfiles.AccessibleDescription = "";
+            this.cProfiles.AccessibleDescription = "Select the current account";
             this.cProfiles.AccessibleName = "Profiles";
             this.cProfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cProfiles.FormattingEnabled = true;
@@ -410,6 +409,7 @@
             // 
             // tTempPrefix
             // 
+            this.tTempPrefix.AccessibleDescription = "the prefix added to temporary files created by the application";
             this.tTempPrefix.Location = new System.Drawing.Point(21, 181);
             this.tTempPrefix.Name = "tTempPrefix";
             this.tTempPrefix.Size = new System.Drawing.Size(408, 20);
@@ -428,8 +428,8 @@
             // 
             // rBothWaySync
             // 
-            this.rBothWaySync.AccessibleDescription = "";
-            this.rBothWaySync.AccessibleName = "open the local file";
+            this.rBothWaySync.AccessibleDescription = "both upload and download";
+            this.rBothWaySync.AccessibleName = "";
             this.rBothWaySync.Checked = true;
             this.rBothWaySync.Location = new System.Drawing.Point(21, 136);
             this.rBothWaySync.Name = "rBothWaySync";
@@ -451,8 +451,8 @@
             // 
             // rRemoteToLocalOnly
             // 
-            this.rRemoteToLocalOnly.AccessibleDescription = "";
-            this.rRemoteToLocalOnly.AccessibleName = "copy link to clipboard";
+            this.rRemoteToLocalOnly.AccessibleDescription = "only download files to local machine";
+            this.rRemoteToLocalOnly.AccessibleName = "";
             this.rRemoteToLocalOnly.Location = new System.Drawing.Point(21, 113);
             this.rRemoteToLocalOnly.Name = "rRemoteToLocalOnly";
             this.rRemoteToLocalOnly.Size = new System.Drawing.Size(408, 17);
@@ -463,8 +463,8 @@
             // 
             // rLocalToRemoteOnly
             // 
-            this.rLocalToRemoteOnly.AccessibleDescription = "";
-            this.rLocalToRemoteOnly.AccessibleName = "open link in default browser";
+            this.rLocalToRemoteOnly.AccessibleDescription = "only upload files to server";
+            this.rLocalToRemoteOnly.AccessibleName = "";
             this.rLocalToRemoteOnly.Location = new System.Drawing.Point(21, 90);
             this.rLocalToRemoteOnly.Name = "rLocalToRemoteOnly";
             this.rLocalToRemoteOnly.Size = new System.Drawing.Size(408, 17);
@@ -500,6 +500,8 @@
             // 
             // bConfigureAccount
             // 
+            this.bConfigureAccount.AccessibleDescription = "opens a form with details of this account";
+            this.bConfigureAccount.AccessibleName = "Account details";
             this.bConfigureAccount.Location = new System.Drawing.Point(325, 16);
             this.bConfigureAccount.Name = "bConfigureAccount";
             this.bConfigureAccount.Size = new System.Drawing.Size(107, 23);
@@ -548,6 +550,7 @@
             // 
             // bConfigureSelectiveSync
             // 
+            this.bConfigureSelectiveSync.AccessibleDescription = "Open form to configure selective sync";
             this.bConfigureSelectiveSync.Location = new System.Drawing.Point(325, 19);
             this.bConfigureSelectiveSync.Name = "bConfigureSelectiveSync";
             this.bConfigureSelectiveSync.Size = new System.Drawing.Size(107, 23);
@@ -558,6 +561,7 @@
             // 
             // bConfigureExtensions
             // 
+            this.bConfigureExtensions.AccessibleDescription = "Open form to configure ignored extensions";
             this.bConfigureExtensions.Location = new System.Drawing.Point(325, 48);
             this.bConfigureExtensions.Name = "bConfigureExtensions";
             this.bConfigureExtensions.Size = new System.Drawing.Size(107, 23);
@@ -615,6 +619,7 @@
             // 
             // cIgnoreTempFiles
             // 
+            this.cIgnoreTempFiles.AccessibleDescription = "Check to ignore temporary files";
             this.cIgnoreTempFiles.Location = new System.Drawing.Point(22, 98);
             this.cIgnoreTempFiles.Name = "cIgnoreTempFiles";
             this.cIgnoreTempFiles.Size = new System.Drawing.Size(408, 17);
@@ -625,6 +630,7 @@
             // 
             // cIgnoreDotfiles
             // 
+            this.cIgnoreDotfiles.AccessibleDescription = "Check to ignore dotfiles";
             this.cIgnoreDotfiles.Location = new System.Drawing.Point(22, 121);
             this.cIgnoreDotfiles.Name = "cIgnoreDotfiles";
             this.cIgnoreDotfiles.Size = new System.Drawing.Size(408, 17);
@@ -1038,6 +1044,7 @@
             this.tray.Text = "FTPbox";
             this.tray.Visible = true;
             this.tray.BalloonTipClicked += new System.EventHandler(this.tray_BalloonTipClicked);
+            this.tray.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tray_MouseClick);
             this.tray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tray_MouseDoubleClick);
             // 
             // trayMenu
@@ -1045,103 +1052,49 @@
             this.trayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
             this.toolStripSeparator2,
-            this.recentFilesToolStripMenuItem,
             this.SyncToolStripMenuItem,
             this.toolStripSeparator1,
             this.aboutToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.trayMenu.Name = "trayMenu";
-            this.trayMenu.Size = new System.Drawing.Size(143, 126);
+            this.trayMenu.Size = new System.Drawing.Size(143, 104);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionsToolStripMenuItem.Text = "Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(139, 6);
-            // 
-            // recentFilesToolStripMenuItem
-            // 
-            this.recentFilesToolStripMenuItem.AccessibleDescription = "Dropbdown menu";
-            this.recentFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5});
-            this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
-            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.recentFilesToolStripMenuItem.Text = "Recent Files";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Enabled = false;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
-            this.toolStripMenuItem1.Text = "Not available";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Enabled = false;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(143, 22);
-            this.toolStripMenuItem2.Text = "Not available";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Enabled = false;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(143, 22);
-            this.toolStripMenuItem3.Text = "Not available";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Enabled = false;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(143, 22);
-            this.toolStripMenuItem4.Text = "Not available";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Enabled = false;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(143, 22);
-            this.toolStripMenuItem5.Text = "Not available";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
             // SyncToolStripMenuItem
             // 
             this.SyncToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.SyncToolStripMenuItem.Name = "SyncToolStripMenuItem";
-            this.SyncToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.SyncToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.SyncToolStripMenuItem.Text = "Start syncing";
             this.SyncToolStripMenuItem.Click += new System.EventHandler(this.SyncToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -1222,12 +1175,6 @@
         private System.Windows.Forms.NotifyIcon tray;
         private System.Windows.Forms.ContextMenuStrip trayMenu;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.TabPage tabBandwidth;
