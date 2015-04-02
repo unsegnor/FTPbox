@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setup));
             this.cAskForPass = new System.Windows.Forms.CheckBox();
             this.gLoginDetails = new System.Windows.Forms.GroupBox();
+            this.cShowAdvanced = new System.Windows.Forms.CheckBox();
             this.labKeyPath = new System.Windows.Forms.Label();
             this.labColon = new System.Windows.Forms.Label();
             this.cEncryption = new System.Windows.Forms.ComboBox();
@@ -78,13 +79,14 @@
             this.cAskForPass.Name = "cAskForPass";
             this.cAskForPass.Size = new System.Drawing.Size(433, 17);
             this.cAskForPass.TabIndex = 6;
-            this.cAskForPass.Text = "Always ask for password";
+            this.cAskForPass.Text = "No guardar la contraseña";
             this.cAskForPass.UseVisualStyleBackColor = true;
             // 
             // gLoginDetails
             // 
             this.gLoginDetails.AccessibleDescription = "";
             this.gLoginDetails.AccessibleName = "FTP Details";
+            this.gLoginDetails.Controls.Add(this.cShowAdvanced);
             this.gLoginDetails.Controls.Add(this.labKeyPath);
             this.gLoginDetails.Controls.Add(this.labColon);
             this.gLoginDetails.Controls.Add(this.cEncryption);
@@ -104,7 +106,18 @@
             this.gLoginDetails.Size = new System.Drawing.Size(460, 205);
             this.gLoginDetails.TabIndex = 36;
             this.gLoginDetails.TabStop = false;
-            this.gLoginDetails.Text = "FTP Login Details";
+            this.gLoginDetails.Text = "Credenciales de Usuario";
+            // 
+            // cShowAdvanced
+            // 
+            this.cShowAdvanced.AutoSize = true;
+            this.cShowAdvanced.Location = new System.Drawing.Point(322, 167);
+            this.cShowAdvanced.Name = "cShowAdvanced";
+            this.cShowAdvanced.Size = new System.Drawing.Size(126, 17);
+            this.cShowAdvanced.TabIndex = 34;
+            this.cShowAdvanced.Text = "Opciones avanzadas";
+            this.cShowAdvanced.UseVisualStyleBackColor = true;
+            this.cShowAdvanced.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // labKeyPath
             // 
@@ -190,7 +203,7 @@
             this.labEncryption.Name = "labEncryption";
             this.labEncryption.Size = new System.Drawing.Size(436, 13);
             this.labEncryption.TabIndex = 26;
-            this.labEncryption.Text = "Encryption:";
+            this.labEncryption.Text = "Encriptación:";
             // 
             // labMode
             // 
@@ -200,7 +213,7 @@
             this.labMode.Name = "labMode";
             this.labMode.Size = new System.Drawing.Size(436, 13);
             this.labMode.TabIndex = 23;
-            this.labMode.Text = "Mode:";
+            this.labMode.Text = "Modo:";
             // 
             // nPort
             // 
@@ -233,7 +246,7 @@
             this.labHost.Name = "labHost";
             this.labHost.Size = new System.Drawing.Size(436, 13);
             this.labHost.TabIndex = 20;
-            this.labHost.Text = "Host:";
+            this.labHost.Text = "Servidor:";
             // 
             // labPass
             // 
@@ -243,7 +256,7 @@
             this.labPass.Name = "labPass";
             this.labPass.Size = new System.Drawing.Size(436, 13);
             this.labPass.TabIndex = 17;
-            this.labPass.Text = "Password:";
+            this.labPass.Text = "Contraseña:";
             // 
             // labUN
             // 
@@ -253,7 +266,7 @@
             this.labUN.Name = "labUN";
             this.labUN.Size = new System.Drawing.Size(436, 13);
             this.labUN.TabIndex = 16;
-            this.labUN.Text = "Username:";
+            this.labUN.Text = "Usuario:";
             // 
             // gLocalFolder
             // 
@@ -268,7 +281,7 @@
             this.gLocalFolder.Size = new System.Drawing.Size(460, 205);
             this.gLocalFolder.TabIndex = 37;
             this.gLocalFolder.TabStop = false;
-            this.gLocalFolder.Text = "Local Folder";
+            this.gLocalFolder.Text = "Carpeta de Sincronización";
             // 
             // rDefaultLocalFolder
             // 
@@ -280,7 +293,7 @@
             this.rDefaultLocalFolder.Size = new System.Drawing.Size(434, 40);
             this.rDefaultLocalFolder.TabIndex = 0;
             this.rDefaultLocalFolder.TabStop = true;
-            this.rDefaultLocalFolder.Text = "I want to use the default local folder";
+            this.rDefaultLocalFolder.Text = "Utilizar la carpeta por defecto";
             this.rDefaultLocalFolder.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.rDefaultLocalFolder.UseVisualStyleBackColor = true;
             this.rDefaultLocalFolder.CheckedChanged += new System.EventHandler(this.rDefaultLocalFolder_CheckedChanged);
@@ -293,7 +306,7 @@
             this.rCustomLocalFolder.Name = "rCustomLocalFolder";
             this.rCustomLocalFolder.Size = new System.Drawing.Size(434, 40);
             this.rCustomLocalFolder.TabIndex = 1;
-            this.rCustomLocalFolder.Text = "I want to select a local folder";
+            this.rCustomLocalFolder.Text = "Seleccionar otra carpeta";
             this.rCustomLocalFolder.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.rCustomLocalFolder.UseVisualStyleBackColor = true;
             this.rCustomLocalFolder.CheckedChanged += new System.EventHandler(this.rCustomLocalFolder_CheckedChanged);
@@ -307,7 +320,7 @@
             this.bBrowse.Name = "bBrowse";
             this.bBrowse.Size = new System.Drawing.Size(74, 23);
             this.bBrowse.TabIndex = 2;
-            this.bBrowse.Text = "Browse";
+            this.bBrowse.Text = "Explorar";
             this.bBrowse.UseVisualStyleBackColor = true;
             this.bBrowse.Click += new System.EventHandler(this.bBrowse_Click);
             // 
@@ -333,7 +346,7 @@
             this.gRemoteFolder.Size = new System.Drawing.Size(460, 205);
             this.gRemoteFolder.TabIndex = 73;
             this.gRemoteFolder.TabStop = false;
-            this.gRemoteFolder.Text = "Select Directory";
+            this.gRemoteFolder.Text = "Seleccionar carpetas a sincronizar";
             // 
             // tFullRemotePath
             // 
@@ -355,7 +368,7 @@
             this.labFullPath.Name = "labFullPath";
             this.labFullPath.Size = new System.Drawing.Size(433, 13);
             this.labFullPath.TabIndex = 68;
-            this.labFullPath.Text = "Full Path:";
+            this.labFullPath.Text = "Ruta remota:";
             // 
             // tRemoteList
             // 
@@ -380,7 +393,7 @@
             this.gSelectiveSync.Size = new System.Drawing.Size(460, 205);
             this.gSelectiveSync.TabIndex = 74;
             this.gSelectiveSync.TabStop = false;
-            this.gSelectiveSync.Text = "Selective Sync";
+            this.gSelectiveSync.Text = "Archivos a sincronizar";
             // 
             // rSyncAll
             // 
@@ -393,7 +406,7 @@
             this.rSyncAll.Size = new System.Drawing.Size(434, 40);
             this.rSyncAll.TabIndex = 0;
             this.rSyncAll.TabStop = true;
-            this.rSyncAll.Text = "I want to synchronize all files";
+            this.rSyncAll.Text = "Sincronizar todos los archivos";
             this.rSyncAll.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.rSyncAll.UseVisualStyleBackColor = true;
             this.rSyncAll.CheckedChanged += new System.EventHandler(this.rSyncAll_CheckedChanged);
@@ -407,20 +420,21 @@
             this.rSyncCustom.Name = "rSyncCustom";
             this.rSyncCustom.Size = new System.Drawing.Size(434, 40);
             this.rSyncCustom.TabIndex = 1;
-            this.rSyncCustom.Text = "I want to select what files will be synchronized";
+            this.rSyncCustom.Text = "Seleccionar qué archivos quiero sincronizar";
             this.rSyncCustom.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.rSyncCustom.UseVisualStyleBackColor = true;
+            this.rSyncCustom.Visible = false;
             this.rSyncCustom.CheckedChanged += new System.EventHandler(this.rSyncCustom_CheckedChanged);
             // 
             // bNext
             // 
             this.bNext.AccessibleDescription = "Go to next step";
             this.bNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bNext.Location = new System.Drawing.Point(316, 223);
+            this.bNext.Location = new System.Drawing.Point(314, 224);
             this.bNext.Name = "bNext";
             this.bNext.Size = new System.Drawing.Size(75, 23);
             this.bNext.TabIndex = 75;
-            this.bNext.Text = "Next";
+            this.bNext.Text = "Siguiente";
             this.bNext.UseVisualStyleBackColor = true;
             this.bNext.Click += new System.EventHandler(this.bNext_Click);
             // 
@@ -428,11 +442,11 @@
             // 
             this.bFinish.AccessibleDescription = "Finish account set up";
             this.bFinish.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bFinish.Location = new System.Drawing.Point(397, 223);
+            this.bFinish.Location = new System.Drawing.Point(395, 224);
             this.bFinish.Name = "bFinish";
             this.bFinish.Size = new System.Drawing.Size(75, 23);
             this.bFinish.TabIndex = 76;
-            this.bFinish.Text = "Finish";
+            this.bFinish.Text = "Terminar";
             this.bFinish.UseVisualStyleBackColor = true;
             this.bFinish.Click += new System.EventHandler(this.bFinish_Click);
             // 
@@ -441,11 +455,11 @@
             this.bPrevious.AccessibleDescription = "Go to previous step";
             this.bPrevious.AccessibleName = "";
             this.bPrevious.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bPrevious.Location = new System.Drawing.Point(235, 223);
+            this.bPrevious.Location = new System.Drawing.Point(233, 224);
             this.bPrevious.Name = "bPrevious";
             this.bPrevious.Size = new System.Drawing.Size(75, 23);
             this.bPrevious.TabIndex = 77;
-            this.bPrevious.Text = "Previous";
+            this.bPrevious.Text = "Anterior";
             this.bPrevious.UseVisualStyleBackColor = true;
             this.bPrevious.Click += new System.EventHandler(this.bPrevious_Click);
             // 
@@ -460,16 +474,16 @@
             this.gLanguage.Size = new System.Drawing.Size(460, 205);
             this.gLanguage.TabIndex = 76;
             this.gLanguage.TabStop = false;
-            this.gLanguage.Text = "Language";
+            this.gLanguage.Text = "Idioma";
             // 
             // labSelectLanguage
             // 
             this.labSelectLanguage.AutoSize = true;
             this.labSelectLanguage.Location = new System.Drawing.Point(12, 30);
             this.labSelectLanguage.Name = "labSelectLanguage";
-            this.labSelectLanguage.Size = new System.Drawing.Size(110, 13);
+            this.labSelectLanguage.Size = new System.Drawing.Size(108, 13);
             this.labSelectLanguage.TabIndex = 30;
-            this.labSelectLanguage.Text = "Select your language:";
+            this.labSelectLanguage.Text = "Selecciona tu idioma:";
             // 
             // cLanguages
             // 
@@ -490,15 +504,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 253);
+            this.ClientSize = new System.Drawing.Size(477, 254);
             this.Controls.Add(this.gLanguage);
             this.Controls.Add(this.bPrevious);
+            this.Controls.Add(this.gLoginDetails);
             this.Controls.Add(this.bFinish);
             this.Controls.Add(this.bNext);
             this.Controls.Add(this.gSelectiveSync);
             this.Controls.Add(this.gRemoteFolder);
             this.Controls.Add(this.gLocalFolder);
-            this.Controls.Add(this.gLoginDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -557,5 +571,6 @@
         private System.Windows.Forms.TextBox tFullRemotePath;
         private System.Windows.Forms.Label labFullPath;
         private System.Windows.Forms.Label labKeyPath;
+        private System.Windows.Forms.CheckBox cShowAdvanced;
     }
 }

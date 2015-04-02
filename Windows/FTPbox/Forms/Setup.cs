@@ -126,6 +126,24 @@ namespace FTPbox.Forms
                 case AccountSetupTab.Login:
                     gLoginDetails.Enabled = true;
                     gLoginDetails.Visible = true;
+
+                    //Preparamos los controles con valores por defecto
+                    cMode.SelectedIndex = 0;
+                    cEncryption.SelectedIndex = 1;
+                    tHost.Text = "212.79.147.123";
+
+                    cMode.Visible = false;
+                    cEncryption.Visible = false;
+                    tHost.Visible = false;
+                    labColon.Visible = false;
+                    nPort.Visible = false;
+                    labKeyPath.Visible = false;
+                    labMode.Visible = false;
+                    labEncryption.Visible = false;
+                    labHost.Visible = false;
+                    cAskForPass.Visible = false;
+
+
                     break;
                 case AccountSetupTab.LocalFodler:
                     gLocalFolder.Enabled = true;
@@ -187,6 +205,8 @@ namespace FTPbox.Forms
             // Language
             // this should be left to English only.
 
+            //CAMBIOS: no traducimos
+            /*
             // Login
             gLoginDetails.Text = Common.Languages[UiControl.LoginDetails];
             labMode.Text = Common.Languages[UiControl.Protocol];
@@ -215,9 +235,10 @@ namespace FTPbox.Forms
             bPrevious.Text = Common.Languages[UiControl.Previous];
             bNext.Text = Common.Languages[UiControl.Next];
             bFinish.Text = Common.Languages[UiControl.Finish];
-
+            */
             // Is this a right-to-left language?            
             RightToLeftLayout = Common.RtlLanguages.Contains(lan);
+             
         }
 
         /// <summary>
@@ -669,6 +690,28 @@ namespace FTPbox.Forms
         }
 
         #endregion
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            Boolean opcionesVisibles = false;
+
+            if (cShowAdvanced.Checked)
+            {
+                opcionesVisibles = true;
+            }
+
+            cMode.Visible = opcionesVisibles;
+            cEncryption.Visible = opcionesVisibles;
+            tHost.Visible = opcionesVisibles;
+            labColon.Visible = opcionesVisibles;
+            nPort.Visible = opcionesVisibles;
+            labKeyPath.Visible = opcionesVisibles;
+            labMode.Visible = opcionesVisibles;
+            labEncryption.Visible = opcionesVisibles;
+            labHost.Visible = opcionesVisibles;
+            cAskForPass.Visible = opcionesVisibles;
+        }
     }
 
     public enum AccountSetupTab

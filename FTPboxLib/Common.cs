@@ -28,7 +28,7 @@ namespace FTPboxLib
 
         // All available languages and their shortcodes
         public static readonly Dictionary<string, string> LanguageList = new Dictionary<string, string> { 
-                { "en", "English" }, { "es", "Spanish" }, { "de", "German" }, { "fr", "French" }, { "nl", "Dutch" }, { "el", "Greek" }, { "it", "Italian" }, 
+                { "en", "English" }, { "es", "Español" }, { "de", "German" }, { "fr", "French" }, { "nl", "Dutch" }, { "el", "Greek" }, { "it", "Italian" }, 
                 { "tr", "Turkish" }, { "pt-BR", "Brazilian Portuguese" }, { "fo", "Faroese" }, { "sv", "Swedish" }, { "sq", "Albanian" }, { "ro", "Romanian" }, 
                 { "ko", "Korean" }, { "ru", "Russian" }, { "ja", "Japanese" }, { "no", "Norwegian" }, { "hu", "Hungarian" }, { "vi", "Vietnamese" }, 
                 { "zh_HANS", "Chinese, Simplified" }, { "zh_HANT", "Chinese, Traditional" }, { "lt", "Lithuanian" }, { "da", "Dansk" }, { "pl", "Polish" }, 
@@ -231,8 +231,9 @@ namespace FTPboxLib
         {
             get
             {
+                //CAMBIOS: Cambiamos el idioma por defecto
                 return string.IsNullOrWhiteSpace(Settings.General.Language) 
-                    ? LanguageList.Keys.ToList().IndexOf("en") : LanguageList.Keys.ToList().IndexOf(Settings.General.Language); 
+                    ? LanguageList.Keys.ToList().IndexOf("es") : LanguageList.Keys.ToList().IndexOf(Settings.General.Language); 
             }
         }
 
