@@ -37,19 +37,19 @@ namespace FTPboxLib
                     default:
                         return null;
                     case MessageType.ItemChanged:
-                        return Get("/tray/changed", "{0} ha cambiado.");
+                        return Get("/tray/changed", "{0} han cambiado.");
                     case MessageType.ItemCreated:
-                        return Get("/tray/created", "{0} ha sido creado.");
+                        return Get("/tray/created", "{0} han sido creados.");
                     case MessageType.ItemDeleted:
-                        return Get("/tray/deleted", "{0} ha sido eliminado.");
+                        return Get("/tray/deleted", "{0} han sido eliminados.");
                     case MessageType.ItemRenamed:
                         return Get("/tray/renamed", "{0} ha sido renombrado a {1}.");
                     case MessageType.ItemUpdated:
-                        return Get("/tray/updated", "{0} ha sido actualizado.");
+                        return Get("/tray/updated", "{0} han sido actualizados.");
                     case MessageType.FilesOrFoldersUpdated:
-                        return Get("/tray/FilesOrFoldersUpdated", "{0} {1} ha sido actualizado");
+                        return Get("/tray/FilesOrFoldersUpdated", "{0} {1} han sido actualizados");
                     case MessageType.FilesOrFoldersCreated:
-                        return Get("/tray/FilesOrFoldersCreated", "{0} {1} ha sido creado");
+                        return Get("/tray/FilesOrFoldersCreated", "{0} {1} han sido creados");
                     case MessageType.FilesAndFoldersChanged:
                         return Get("/tray/FilesAndFoldersChanged", "{0} {1} y {2} {3} han sido actualizados");
                     case MessageType.ItemsDeleted:

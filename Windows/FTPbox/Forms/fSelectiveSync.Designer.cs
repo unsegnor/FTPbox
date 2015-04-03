@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 426);
+            this.ClientSize = new System.Drawing.Size(384, 427);
             this.Controls.Add(this.bDone);
             this.Controls.Add(this.bRefresh);
             this.Controls.Add(this.lSelectiveSync);
@@ -100,7 +100,7 @@
             this.MinimumSize = new System.Drawing.Size(400, 465);
             this.Name = "fSelectiveSync";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Selective Sync";
+            this.Text = "Sincronización selectiva";
             this.Load += new System.EventHandler(this.fSelectiveSync_Load);
             this.RightToLeftLayoutChanged += new System.EventHandler(this.fSelectiveSync_RightToLeftLayoutChanged);
             this.ResumeLayout(false);

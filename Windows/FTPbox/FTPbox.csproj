@@ -167,6 +167,7 @@
     <None Include="Resources\btn_donate_SM.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\escloudconletras.png" />
     <Content Include="Resources\folder.jpg" />
     <Content Include="Resources\settings.jpg" />
     <None Include="Resources\syncing.ico" />

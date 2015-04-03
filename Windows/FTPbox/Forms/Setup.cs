@@ -711,6 +711,7 @@ namespace FTPbox.Forms
             labEncryption.Visible = opcionesVisibles;
             labHost.Visible = opcionesVisibles;
             cAskForPass.Visible = opcionesVisibles;
+            escloudpicture.Visible = !opcionesVisibles;
         }
     }
 

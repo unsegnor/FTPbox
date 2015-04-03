@@ -115,7 +115,7 @@ namespace FTPbox.Forms
             
             StartUpWork();
 
-            CheckForUpdate();
+            //CheckForUpdate();
         }
 
         /// <summary>
@@ -169,7 +169,14 @@ namespace FTPbox.Forms
 
                 Log.Write(l.Info, "Done");
 
+                //CAMBIOS: Activamos el incio automático
+                //TODO: falta definir la sincronización automática por defecto cada 60 segundos, se tiene que poder hacer en otro sitio por defecto porque el archivo ya existe.
+                //También el arranque al inicio.
+                SetStartup(true);
+
+
                 this.Show();
+                
             }
             else if (Program.Account.isAccountSet)
                 try
@@ -269,7 +276,7 @@ namespace FTPbox.Forms
                 cManually.Checked = true;
 
             nSyncFrequency.Value = Convert.ToDecimal(Settings.DefaultProfile.Account.SyncFrequency);
-            if (nSyncFrequency.Value == 0) nSyncFrequency.Value = 10;
+            if (nSyncFrequency.Value == 0) nSyncFrequency.Value = 60;
 
             if (Program.Account.Account.Protocol != FtpProtocol.SFTP)
             {
@@ -363,7 +370,7 @@ namespace FTPbox.Forms
             Settings.General.Language = lan;
             Log.Write(l.Debug, "Changing language to: {0}", lan);
 
-            this.Text = "FTPbox | " + Common.Languages[UiControl.Options];
+            this.Text = "Escloud | " + Common.Languages[UiControl.Options];
             //general tab
             tabGeneral.Text = Common.Languages[UiControl.General];
             gLinks.Text = Common.Languages[UiControl.Links];
@@ -643,7 +650,7 @@ namespace FTPbox.Forms
             string command;
 
             //Add the parent menu
-            key.SetValue("MUIVerb", "FTPbox");
+            key.SetValue("MUIVerb", "Escloud");
             key.SetValue("Icon", icon_path);
             key.SetValue("SubCommands", "");
 
@@ -675,7 +682,7 @@ namespace FTPbox.Forms
             reg_path = "Software\\Classes\\*\\Shell\\FTPbox\\Shell\\Sync";
             Registry.CurrentUser.CreateSubKey(reg_path);
             key = Registry.CurrentUser.OpenSubKey(reg_path, true);
-            key.SetValue("MUIVerb", "Synchronize this file");
+            key.SetValue("MUIVerb", "Sincronizar este archivo");
             key.SetValue("AppliesTo", applies_to);
             key.CreateSubKey("Command");
             reg_path += "\\Command";
@@ -687,7 +694,7 @@ namespace FTPbox.Forms
             reg_path = "Software\\Classes\\*\\Shell\\FTPbox\\Shell\\Move";
             Registry.CurrentUser.CreateSubKey(reg_path);
             key = Registry.CurrentUser.OpenSubKey(reg_path, true);
-            key.SetValue("MUIVerb", "Move to FTPbox folder");
+            key.SetValue("MUIVerb", "Mover a la carpeta de Escloud");
             key.SetValue("AppliesTo", getAppliesTo(true));
             key.CreateSubKey("Command");
             reg_path += "\\Command";

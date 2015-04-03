@@ -239,7 +239,7 @@
             this.MinimizeBox = false;
             this.Name = "fAccountDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fAccountDetails";
+            this.Text = "Detalle de Cuenta";
             this.Load += new System.EventHandler(this.fAccountDetails_Load);
             this.RightToLeftLayoutChanged += new System.EventHandler(this.fAccountDetails_RightToLeftLayoutChanged);
             this.gAccount.ResumeLayout(false);

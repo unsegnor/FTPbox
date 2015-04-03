@@ -404,7 +404,7 @@
             this.MinimumSize = new System.Drawing.Size(492, 492);
             this.Name = "Translate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FTPbox Translator";
+            this.Text = "Traductor";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.cMenu.ResumeLayout(false);
             this.pStartup.ResumeLayout(false);

@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 190);
+            this.ClientSize = new System.Drawing.Size(257, 191);
             this.Controls.Add(this.bDone);
             this.Controls.Add(this.tNewExt);
             this.Controls.Add(this.lIgnoredExtensions);
@@ -117,7 +117,7 @@
             this.MinimumSize = new System.Drawing.Size(273, 229);
             this.Name = "fIgnoredExtensions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ignored Extensions";
+            this.Text = "Extensiones ignoradas";
             this.Load += new System.EventHandler(this.fIgnoredExtensions_Load);
             this.RightToLeftLayoutChanged += new System.EventHandler(this.fIgnoredExtensions_RightToLeftLayoutChanged);
             this.ResumeLayout(false);

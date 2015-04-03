@@ -106,6 +106,7 @@ namespace FTPboxLib
 
     public class Account
     {
+        
         public string Host { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -115,9 +116,17 @@ namespace FTPboxLib
         public SyncMethod SyncMethod { get; set; }
         public int SyncFrequency { get; set; }
         public string PrivateKeyFile { get; set; }
-        public long KeepAliveInterval = 10;
+        public long KeepAliveInterval = 0;
         public SyncDirection SyncDirection = SyncDirection.Both;
-        public string TempFilePrefix = "~ftpb_";
+        public string TempFilePrefix = "~escloudtrans_";
+
+        //CAMBIOS: Cambiamos los valores por defecto en el constructor
+        public Account()
+        {
+            SyncMethod = SyncMethod.Automatic;
+            SyncFrequency = 60;
+        }
+
     }
 
     public class Paths

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setup));
             this.cAskForPass = new System.Windows.Forms.CheckBox();
             this.gLoginDetails = new System.Windows.Forms.GroupBox();
+            this.escloudpicture = new System.Windows.Forms.PictureBox();
             this.cShowAdvanced = new System.Windows.Forms.CheckBox();
             this.labKeyPath = new System.Windows.Forms.Label();
             this.labColon = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.labSelectLanguage = new System.Windows.Forms.Label();
             this.cLanguages = new System.Windows.Forms.ComboBox();
             this.gLoginDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escloudpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPort)).BeginInit();
             this.gLocalFolder.SuspendLayout();
             this.gRemoteFolder.SuspendLayout();
@@ -86,6 +88,7 @@
             // 
             this.gLoginDetails.AccessibleDescription = "";
             this.gLoginDetails.AccessibleName = "FTP Details";
+            this.gLoginDetails.Controls.Add(this.escloudpicture);
             this.gLoginDetails.Controls.Add(this.cShowAdvanced);
             this.gLoginDetails.Controls.Add(this.labKeyPath);
             this.gLoginDetails.Controls.Add(this.labColon);
@@ -107,6 +110,16 @@
             this.gLoginDetails.TabIndex = 36;
             this.gLoginDetails.TabStop = false;
             this.gLoginDetails.Text = "Credenciales de Usuario";
+            // 
+            // escloudpicture
+            // 
+            this.escloudpicture.Image = global::FTPbox.Properties.Resources.escloudconletras;
+            this.escloudpicture.Location = new System.Drawing.Point(199, 10);
+            this.escloudpicture.Name = "escloudpicture";
+            this.escloudpicture.Size = new System.Drawing.Size(107, 91);
+            this.escloudpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.escloudpicture.TabIndex = 35;
+            this.escloudpicture.TabStop = false;
             // 
             // cShowAdvanced
             // 
@@ -518,12 +531,13 @@
             this.MaximizeBox = false;
             this.Name = "Setup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Setup";
+            this.Text = "Configuración Inicial";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Setup_FormClosing);
             this.Load += new System.EventHandler(this.Setup_Load);
             this.RightToLeftLayoutChanged += new System.EventHandler(this.Setup_RightToLeftLayoutChanged);
             this.gLoginDetails.ResumeLayout(false);
             this.gLoginDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escloudpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPort)).EndInit();
             this.gLocalFolder.ResumeLayout(false);
             this.gLocalFolder.PerformLayout();
@@ -572,5 +586,6 @@
         private System.Windows.Forms.Label labFullPath;
         private System.Windows.Forms.Label labKeyPath;
         private System.Windows.Forms.CheckBox cShowAdvanced;
+        private System.Windows.Forms.PictureBox escloudpicture;
     }
 }
