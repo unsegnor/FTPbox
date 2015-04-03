@@ -224,8 +224,7 @@ namespace FTPbox
                             p.WaitForExit(3000);
                             if (!p.HasExited)
                             {
-                                MessageBox.Show("Another instance of FTPbox is already running.", "FTPbox",
-                                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                //MessageBox.Show("Another instance of FTPbox is already running.", "FTPbox", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Process.GetCurrentProcess().Kill();
                             }
                         }
