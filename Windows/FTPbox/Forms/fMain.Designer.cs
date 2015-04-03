@@ -116,6 +116,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
             this.gLanguage.SuspendLayout();
@@ -807,6 +808,7 @@
             // tabAbout
             // 
             this.tabAbout.AccessibleDescription = "";
+            this.tabAbout.Controls.Add(this.label1);
             this.tabAbout.Controls.Add(this.labSupportMail);
             this.tabAbout.Controls.Add(this.linkLabel4);
             this.tabAbout.Controls.Add(this.linkLabel3);
@@ -831,7 +833,7 @@
             // labSupportMail
             // 
             this.labSupportMail.AccessibleDescription = "";
-            this.labSupportMail.Location = new System.Drawing.Point(272, 113);
+            this.labSupportMail.Location = new System.Drawing.Point(272, 150);
             this.labSupportMail.Name = "labSupportMail";
             this.labSupportMail.Size = new System.Drawing.Size(129, 13);
             this.labSupportMail.TabIndex = 14;
@@ -840,7 +842,7 @@
             // linkLabel4
             // 
             this.linkLabel4.AccessibleDescription = "";
-            this.linkLabel4.Location = new System.Drawing.Point(272, 67);
+            this.linkLabel4.Location = new System.Drawing.Point(272, 100);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(129, 13);
             this.linkLabel4.TabIndex = 9;
@@ -851,7 +853,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AccessibleDescription = "";
-            this.linkLabel3.Location = new System.Drawing.Point(272, 44);
+            this.linkLabel3.Location = new System.Drawing.Point(272, 71);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(129, 13);
             this.linkLabel3.TabIndex = 8;
@@ -862,7 +864,7 @@
             // label19
             // 
             this.label19.AccessibleDescription = "";
-            this.label19.Location = new System.Drawing.Point(272, 136);
+            this.label19.Location = new System.Drawing.Point(272, 176);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(129, 13);
             this.label19.TabIndex = 13;
@@ -871,7 +873,7 @@
             // label21
             // 
             this.label21.AccessibleDescription = "";
-            this.label21.Location = new System.Drawing.Point(272, 90);
+            this.label21.Location = new System.Drawing.Point(272, 126);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(129, 13);
             this.label21.TabIndex = 11;
@@ -880,7 +882,7 @@
             // lVersion
             // 
             this.lVersion.AccessibleDescription = "";
-            this.lVersion.Location = new System.Drawing.Point(272, 21);
+            this.lVersion.Location = new System.Drawing.Point(272, 45);
             this.lVersion.Name = "lVersion";
             this.lVersion.Size = new System.Drawing.Size(129, 13);
             this.lVersion.TabIndex = 8;
@@ -890,7 +892,7 @@
             // 
             this.labLangUsed.AccessibleDescription = "";
             this.labLangUsed.AutoSize = true;
-            this.labLangUsed.Location = new System.Drawing.Point(102, 136);
+            this.labLangUsed.Location = new System.Drawing.Point(100, 176);
             this.labLangUsed.Name = "labLangUsed";
             this.labLangUsed.Size = new System.Drawing.Size(84, 13);
             this.labLangUsed.TabIndex = 7;
@@ -900,7 +902,7 @@
             // 
             this.labContact.AccessibleDescription = "";
             this.labContact.AutoSize = true;
-            this.labContact.Location = new System.Drawing.Point(102, 90);
+            this.labContact.Location = new System.Drawing.Point(102, 126);
             this.labContact.Name = "labContact";
             this.labContact.Size = new System.Drawing.Size(47, 13);
             this.labContact.TabIndex = 5;
@@ -910,7 +912,7 @@
             // 
             this.labSite.AccessibleDescription = "";
             this.labSite.AutoSize = true;
-            this.labSite.Location = new System.Drawing.Point(102, 67);
+            this.labSite.Location = new System.Drawing.Point(100, 100);
             this.labSite.Name = "labSite";
             this.labSite.Size = new System.Drawing.Size(84, 13);
             this.labSite.TabIndex = 4;
@@ -920,17 +922,18 @@
             // 
             this.labTeam.AccessibleDescription = "";
             this.labTeam.AutoSize = true;
-            this.labTeam.Location = new System.Drawing.Point(102, 44);
+            this.labTeam.Location = new System.Drawing.Point(100, 71);
             this.labTeam.Name = "labTeam";
             this.labTeam.Size = new System.Drawing.Size(59, 13);
             this.labTeam.TabIndex = 3;
             this.labTeam.Text = "The Team:";
+            this.labTeam.Click += new System.EventHandler(this.labTeam_Click);
             // 
             // labCurVersion
             // 
             this.labCurVersion.AccessibleDescription = "";
             this.labCurVersion.AutoSize = true;
-            this.labCurVersion.Location = new System.Drawing.Point(102, 21);
+            this.labCurVersion.Location = new System.Drawing.Point(100, 45);
             this.labCurVersion.Name = "labCurVersion";
             this.labCurVersion.Size = new System.Drawing.Size(82, 13);
             this.labCurVersion.TabIndex = 2;
@@ -1042,7 +1045,7 @@
             this.tray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.tray.ContextMenuStrip = this.trayMenu;
             this.tray.Icon = ((System.Drawing.Icon)(resources.GetObject("tray.Icon")));
-            this.tray.Text = "FTPbox";
+            this.tray.Text = "Escloud";
             this.tray.Visible = true;
             this.tray.BalloonTipClicked += new System.EventHandler(this.tray_BalloonTipClicked);
             this.tray.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tray_MouseClick);
@@ -1098,6 +1101,15 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Esta aplicación es una adaptación de FTPbox";
             // 
             // fMain
             // 
@@ -1233,5 +1245,6 @@
         private System.Windows.Forms.TextBox tTempPrefix;
         private System.Windows.Forms.Label labTempPrefix;
         private System.Windows.Forms.CheckBox chkShellMenus;
+        private System.Windows.Forms.Label label1;
     }
 }

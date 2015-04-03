@@ -195,7 +195,7 @@ namespace FTPboxLib
     [JsonObject]
     public class SettingsGeneral
     {
-        public string Language = "";
+        public string Language = "es";
         
         public TrayAction TrayAction = TrayAction.OpenLocalFile;
         

@@ -1619,5 +1619,10 @@ namespace FTPbox.Forms
             labContact.Location = RightToLeftLayout ? new Point(272, 90) : new Point(100, 90);
             labLangUsed.Location = RightToLeftLayout ? new Point(272, 136) : new Point(100, 136);
         }
+
+        private void labTeam_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

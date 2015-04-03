@@ -43,7 +43,7 @@ namespace FTPboxLib
 
     public class NotificationArgs : EventArgs
     {
-        public string Title = "FTPbox"; 
+        public string Title = "Escloud"; 
         
         public string Text;
     }
