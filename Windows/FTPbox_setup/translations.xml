@@ -185,7 +185,7 @@
       <contact_me>Kontaktieren Sie mich</contact_me>
       <copyright>Copyright</copyright>
       <report_bug>Einen Fehler melden</report_bug>
-      <request_feature>Ein Feature vorschlagen</request_feature>
+      <request_feature>Eine neue Funktion vorschlagen</request_feature>
       <donate>Spenden</donate>
       <language>Sprache</language>
       <open_local>Lokale Datei öffnen</open_local>
@@ -200,8 +200,9 @@
       <limit_upload>Uploadgeschwindigkeit beschränken</limit_upload>
       <no_limits>( 0 für keine Beschränkung )</no_limits>
       <selective>Selektive Synchronisierung</selective>
-      <selective_info>Daten deselektieren um sie nicht zu synchronisieren</selective_info>
+      <selective_info>Einträge abwählen, um sie nicht zu synchronisieren</selective_info>
       <refresh>Aktualisieren</refresh>
+      <configure>Konfigurieren</configure>
       <file_filters>Filter</file_filters>
       <ignored_extensions>Ignorierte Dateiendungen</ignored_extensions>
       <remove>Löschen</remove>
@@ -211,6 +212,12 @@
       <old_files>Zuvor geänderte Dateien</old_files>
       <enable_logging>Logging erlauben</enable_logging>
       <view_log>Logbuch anzeigen</view_log>
+      <shell_menus>Zum Kontextmenü hinzufügen</shell_menus>
+      <way_of_sync>Synchronisierungsrichtung</way_of_sync>
+      <local_to_remote>Nur lokal zu entfernt</local_to_remote>
+      <remote_to_local>Nur entfernt zu lokal</remote_to_local>
+      <both_ways>Beide Richtungen</both_ways>
+      <temp_file_prefix>Prefix für temporäre Dateien</temp_file_prefix>
     </main_form>
     <new_account>
       <new_ftp>Neuer FTP Account</new_ftp>
@@ -249,7 +256,7 @@
       <remind_me_next_time>Erinnere mich das nächste mal</remind_me_next_time>
     </new_version>
     <tray>
-      <tray_and_nots>Tray _and Benachrichtigungen</tray_and_nots>
+      <tray_and_nots>Tray &amp; Benachrichtigungen</tray_and_nots>
       <updated>{0} wurde aktualisiert.</updated>
       <created>{0} wurde erstellt.</created>
       <renamed>{0} wurde umbenannt in {1}</renamed>
@@ -265,7 +272,7 @@
       <folders>Ordner</folders>
       <connecting>FTPbox - Verbinden...</connecting>
       <reconnecting>FTPbox - Erneut verbinden..</reconnecting>
-      <listing>FTPbox - Auflistung...</listing>
+      <listing>FTPbox - Vergleichen...</listing>
       <uploading>Hochladen {0}</uploading>
       <downloading>Herunterladen {0}</downloading>
       <ready>FTPbox - Bereit</ready>
@@ -275,6 +282,7 @@
       <link_copied>Link wurde in die Zwischenablage kopiert</link_copied>
       <recent_files>Letzte Dateien</recent_files>
       <not_available>Nicht verfügbar</not_available>
+      <modified>Geändert</modified>
       <start_syncing>Beginne Synchronisierung</start_syncing>
       <exit>Verlassen</exit>
     </tray>
@@ -2641,8 +2649,8 @@
       <offline>FTPbox - 离线</offline>
       <link_copied>链接已经复制至剪贴板</link_copied>
       <recent_files>最近的文件</recent_files>
-      <not_available>最近的文件</not_available>
-      <start_syncing>不提供</start_syncing>
+      <not_available>不提供</not_available>
+      <start_syncing>开始同步</start_syncing>
       <exit>退出</exit>
     </tray>
     <web_interface>
@@ -2797,7 +2805,7 @@
       <profile>Profil</profile>
       <details>Detaljer</details>
       <links>Links</links>
-      <remote_path>Fjern sti</remote_path>
+      <remote_path>Server sti</remote_path>
       <local_path>Lokal sti</local_path>
       <account_full_path>Kontoens fulde sti</account_full_path>
       <when_not_clicked>Når system beskeder eller seneste fil bliver klikket på</when_not_clicked>
@@ -2805,7 +2813,7 @@
       <copy>Kopier link til udklipsholder</copy>
       <about>Om</about>
       <current_version>Denne version</current_version>
-      <team>Holdet</team>
+      <team>Teamet</team>
       <website>Officiel website</website>
       <contact>Kontakt</contact>
       <coded_in>Kodet i</coded_in>
@@ -2818,17 +2826,17 @@
       <request_feature>Forespørg på en funktion</request_feature>
       <donate>Doner</donate>
       <language>Sprog</language>
-      <open_local>Åben den lokale fil</open_local>
+      <open_local>Åbn den lokale fil</open_local>
       <bandwidth>Båndbredde</bandwidth>
       <sync_freq>Synkroniseringsinterval</sync_freq>
-      <sync_when>Synkroniser filer på fjern destination</sync_when>
+      <sync_when>Synkroniser serverfiler</sync_when>
       <manually>Manuelt</manually>
       <auto>Automatisk for hver</auto>
       <seconds>sekunder</seconds>
       <speed_limits>Hastighedsbegrænsning</speed_limits>
       <limit_download>Begræns download hastighed</limit_download>
       <limit_upload>Begræns upload hastighed</limit_upload>
-      <no_limits>Skriv 0 for ingen begrænsning</no_limits>
+      <no_limits>(Skriv 0 for ingen begrænsning)</no_limits>
       <selective>Selektiv synkronisering</selective>
       <selective_info>Fjern markering ved enheder du ikke vil have synkroniseret</selective_info>
       <refresh>Opdater</refresh>
@@ -2841,13 +2849,13 @@
       <temp_files>Midlertidige filer</temp_files>
       <old_files>Filer ændret før</old_files>
       <enable_logging>Aktiver logging</enable_logging>
-      <view_log>Gennemse log</view_log>
+      <view_log>Vis log</view_log>
       <shell_menus>Tilføj til genvejsmenu</shell_menus>
       <way_of_sync>Synkronisering</way_of_sync>
       <local_to_remote>Upload kun</local_to_remote>
       <remote_to_local>Hent kun</remote_to_local>
       <both_ways>Begge veje</both_ways>
-      <temp_file_prefix>Midlertidig fil-forstavelse</temp_file_prefix>
+      <temp_file_prefix>Midlertidig fil-præfiks</temp_file_prefix>
     </main_form>
     <new_account>
       <new_ftp>Ny FTP konto</new_ftp>
@@ -2858,40 +2866,40 @@
       <done>Færdig</done>
     </new_account>
     <paths>
-      <new_paths>Ny sti</new_paths>
-      <add_dir>Tilføj et ny mappe</add_dir>
-      <select_dir>Vælg en mappe</select_dir>
-      <full_path>Den fulde sti</full_path>
-      <default_local>Jeg ønsker at bruge den standard lokal mappe</default_local>
-      <custom_local>Jeg ønsker selv at vælge en lokal mappe</custom_local>
+      <new_paths>Nye stier</new_paths>
+      <add_dir>Tilføj en ny mappe</add_dir>
+      <select_dir>Vælg mappe</select_dir>
+      <full_path>Fulde sti</full_path>
+      <default_local>Jeg ønsker at bruge standard-lokalmappen</default_local>
+      <custom_local>Jeg ønsker at vælge en lokal mappe</custom_local>
       <local_folder>Lokal mappe</local_folder>
       <browse>Gennemse</browse>
     </paths>
     <setup>
       <authentication>Autoritasition</authentication>
       <sync_all_files>Jeg ønsker at synkronisere alle filer</sync_all_files>
-      <sync_specific_files>Jeg ønsker selv at vælge hvile filer der skal synkroniseres</sync_specific_files>
+      <sync_specific_files>Jeg ønsker at vælge hvilke filer der skal synkroniseres</sync_specific_files>
       <previous>Tilbage</previous>
       <next>Næste</next>
     </setup>
     <new_version>
       <new_ver>Ny version</new_ver>
       <update_available>Opdatering tilgængelig</update_available>
-      <new_v_available>En ny version af FTPbox er tilgængelig</new_v_available>
+      <new_v_available>Ny version af FTPbox er tilgængelig</new_v_available>
       <new_version>Ny version</new_version>
       <current_version>Nuværende version</current_version>
       <wanna_download>Vil du downloade den nye version nu?</wanna_download>
       <download>Opdatér nu</download>
       <learn_more>Lær mere</learn_more>
-      <remind_me_next_time>Påmind mig senere</remind_me_next_time>
+      <remind_me_next_time>Ikke nu</remind_me_next_time>
     </new_version>
     <tray>
-      <tray_and_nots>Påmindelser og beskeder</tray_and_nots>
-      <updated>Filer {0} blev opdateret</updated>
-      <created>Filer {0} blev oprettet</created>
-      <renamed>Filer {0} blev navngivet til {1}</renamed>
-      <deleted>Filer {0} blev slettet</deleted>
-      <changed>Filer {0} blev ændret</changed>
+      <tray_and_nots>Påmindelser &amp; beskeder</tray_and_nots>
+      <updated>{0} blev opdateret.</updated>
+      <created>{0} blev oprettet.</created>
+      <renamed>{0} blev omdøbt til {1}</renamed>
+      <deleted>{0} blev slettet.</deleted>
+      <changed>{0} blev ændret.</changed>
       <FilesOrFoldersUpdated>{0} {1} er blevet opdateret</FilesOrFoldersUpdated>
       <FilesOrFoldersCreated>{0} {1} er blevet oprettet</FilesOrFoldersCreated>
       <FilesAndFoldersChanged>{0} {1} og {2} {3} er blevet opdateret</FilesAndFoldersChanged>
@@ -2908,24 +2916,25 @@
       <ready>FTPbox - Klar</ready>
       <synced>FTPbox - Alle filer synkroniseret</synced>
       <syncing>FTPbox - Synkroniserer...</syncing>
-      <offline>FTPbox Offline</offline>
+      <offline>FTPbox - Offline</offline>
       <link_copied>Link kopieret til udklipsholder</link_copied>
       <recent_files>Seneste filer</recent_files>
       <not_available>Ikke tilgængelig</not_available>
+      <modified>Modificeret</modified>
       <start_syncing>Start synkronisering</start_syncing>
-      <exit>Afslut</exit>
+      <exit>Luk</exit>
     </tray>
     <web_interface>
       <web_int>Web brugerflade</web_int>
       <downloading>Web brugerfladen bliver downloadet.</downloading>
-      <in_a_minute>Vent et øjeblik.</in_a_minute>
+      <in_a_minute>Dette vil tage et øjeblik.</in_a_minute>
       <removing>Fjerner web brugerfladen...</removing>
       <removed>Web brugerfladen er blevet fjernet.</removed>
       <updating>Opdaterer web brugerfladen...</updating>
       <updated>Web brugerfladen er blevet opdateret.</updated>
-      <setup>Klik her for at se og sætte op!</setup>
-      <use_webint>Benyt web brugerflade</use_webint>
-      <view>Se i browser vindue</view>
+      <setup>Klik her for at se og sætte det op!</setup>
+      <use_webint>Benyt web brugerfladen</use_webint>
+      <view>(Vis i browser)</view>
     </web_interface>
 	</da>
 	
@@ -4772,5 +4781,155 @@
       <view>(Виж в браузъра)</view>
     </web_interface>
   </bg>
+
+  <id>
+    <main_form>
+      <options>Pengaturan</options>
+      <general>Umum</general>
+      <host>Host</host>
+      <port>Port</port>
+      <username>Nama User</username>
+      <password>Sandi</password>
+      <mode>Protokol</mode>
+      <change>Ubah</change>
+      <account>Akun</account>
+      <application>Aplikasi</application>
+      <start_on_startup>Jalankan otomatis ketika memulai sistem</start_on_startup>
+      <show_nots>Tampilkan peringatan</show_nots>
+      <profile>Profil</profile>
+      <details>Detail</details>
+      <links>Tautan</links>
+      <remote_path>Path untuk remot</remote_path>
+      <local_path>Path lokal</local_path>
+      <account_full_path>Maksimal path pada akun</account_full_path>
+      <when_not_clicked>Ketika notifikasi pada tray atau file telah di klik</when_not_clicked>
+      <open_in_browser>Membuka link pada broser default</open_in_browser>
+      <copy>Menyalin link</copy>
+      <about>Tentang</about>
+      <current_version>Versi saat ini</current_version>
+      <team>Tim</team>
+      <website>Website resmi</website>
+      <contact>Kontak</contact>
+      <coded_in>Dikode pada</coded_in>
+      <notes>Catatan</notes>
+      <contribute>Kontribusi</contribute>
+      <ftpbox_is_free>FTPbox gratis dan open-source</ftpbox_is_free>
+      <contact_me>Anda dapat bebas menghubungi kami kapan saja</contact_me>
+      <copyright>Hak cipta</copyright>
+      <report_bug>Laporkan bug</report_bug>
+      <request_feature>meminta fitur baru</request_feature>
+      <donate>donasi</donate>
+      <language>Bahasa</language>
+      <open_local>Buka pada file lokal</open_local>
+      <bandwidth>Bandwith</bandwidth>
+      <sync_freq>Frekuensi sinkronisasi</sync_freq>
+      <sync_when>Sinkronisasi file remot</sync_when>
+      <manually>secara manual</manually>
+      <auto>otomastis setiap</auto>
+      <seconds>detik</seconds>
+      <speed_limits>Pembatasan Kecepatan</speed_limits>
+      <limit_download>Pembatasan Kecepatan Pengunduhan</limit_download>
+      <limit_upload>Pembatasan Kecepatan Unggah</limit_upload>
+      <no_limits>( isi 0 atau tidak terbatas )</no_limits>
+      <selective>Sikronisasi Selektif</selective>
+      <selective_info>Jangan menceklist item yang tidak anda inginkan untuk disinkronkan</selective_info>
+      <refresh>Refresh</refresh>
+      <configure>Pengaturan</configure>
+      <file_filters>Penyaringan</file_filters>
+      <ignored_extensions>Mengabaikan Ekstensi</ignored_extensions>
+      <remove>Hapus</remove>
+      <also_ignore>Jangan hiraukan</also_ignore>
+      <dotfiles>( . ) file</dotfiles>
+      <temp_files>File Temporer</temp_files>
+      <old_files>File telah dimodifikasi sebelum</old_files>
+      <enable_logging>Aktifkan Log</enable_logging>
+      <view_log>Lihat Log</view_log>
+      <shell_menus>Tambahkan pada menu konteks</shell_menus>
+      <way_of_sync>Pilihan sinkronasi</way_of_sync>
+      <local_to_remote>Hanya lokal ke remot</local_to_remote>
+      <remote_to_local>Hanya remot ke lokal</remote_to_local>
+      <both_ways>Kedua-duanya</both_ways>
+      <temp_file_prefix>File temporer awal</temp_file_prefix>
+    </main_form>
+    <new_account>
+      <new_ftp>Akun FTP baru</new_ftp>
+      <login_details>Detail FTP login</login_details>
+      <encryption>Enkripsi</encryption>
+      <ask_for_password>Selalu meminta password</ask_for_password>
+      <add>Tambahkan</add>
+      <done>Selesai</done>
+    </new_account>
+    <paths>
+      <new_paths>Path baru</new_paths>
+      <add_dir>Tambahkan direktori baru</add_dir>
+      <select_dir>Pilih direktori</select_dir>
+      <full_path>Path keseluruhan</full_path>
+      <default_local>Gunakan default folder lokal</default_local>
+      <custom_local>Pilih lokal folder</custom_local>
+      <local_folder>Folder lokal</local_folder>
+      <browse>Jelajahi</browse>
+    </paths>
+    <setup>
+      <authentication>Autentikasi</authentication>
+      <sync_all_files>Sinkronasi semua file</sync_all_files>
+      <sync_specific_files>Pilih file yang akan disinkronkan</sync_specific_files>
+      <previous>Sebelumnya</previous>
+      <next>Selanjutnya</next>
+    </setup>
+    <new_version>
+      <new_ver>Versi Baru</new_ver>
+      <update_available>Update Tersedia</update_available>
+      <new_v_available>Versi baru FTPbox telah tersedia</new_v_available>
+      <new_version>Versi Baru</new_version>
+      <current_version>Versi Saat Ini </current_version>
+      <wanna_download>Apakah anda ingin mengunduh versi baru sekarang</wanna_download>
+      <download>Update Sekarang</download>
+      <learn_more>Lebih lanjut</learn_more>
+      <remind_me_next_time>Bukan saatnya</remind_me_next_time>
+    </new_version>
+    <tray>
+      <tray_and_nots>Tray &amp; Notifikasi</tray_and_nots>
+      <updated>{0} telah terupdate</updated>
+      <created>{0} telah dibuat</created>
+      <renamed>{0} telah diganti nama menjadi {1}</renamed>
+      <deleted>{0} telah dihapus</deleted>
+      <changed>{0} telah dirubah</changed>
+      <FilesOrFoldersUpdated>{0} {1} telah terupdate</FilesOrFoldersUpdated>
+      <FilesOrFoldersCreated>{0} {1} telah dibuat</FilesOrFoldersCreated>
+      <FilesAndFoldersChanged>{0} {1} dan {2} {3} telah terupdate</FilesAndFoldersChanged>
+      <ItemsDeleted>{0} item telah terhapus</ItemsDeleted>
+      <file>File</file>
+      <files>File-file</files>
+      <folder>Folder</folder>
+      <folders>Folder-folder</folders>
+      <connecting>FTPbox - Terhubung...</connecting>
+      <reconnecting>FTPbox - Kembali Menghubungkan...</reconnecting>
+      <listing>FTPbox - Mendata...</listing>
+      <uploading>Mengunggah {0}</uploading>
+      <downloading>Mengunduh {0}</downloading>
+      <ready>FTPbox - Telah Siap</ready>
+      <synced>FTPbox - Semua file telah tersinkron</synced>
+      <syncing>FTPbox - Sikronasi...</syncing>
+      <offline>FTPbox - Tidak Terhubung</offline>
+      <link_copied>Link telah disalin</link_copied>
+      <recent_files>File Sebelumnya</recent_files>
+      <not_available>Tidak Tersedia</not_available>
+      <modified>Dirubah</modified>
+      <start_syncing>Memulai Sinkronisasi</start_syncing>
+      <exit>Keluar</exit>
+    </tray>
+    <web_interface>
+      <web_int>Tampilan Antarmuka Web</web_int>
+      <downloading>Tampilan antarmuka web telah terunduh.</downloading>
+      <in_a_minute>Ini membutuhkan waktu beberapa menit.</in_a_minute>
+      <removing>Menghapus antarmuka web...</removing>
+      <removed>Antarmuka web telah terhapus</removed>
+      <updating>Memperbarui tampilan antarmuka web...</updating>
+      <updated>Tampilan antarmuka web telah diperbarui.</updated>
+      <setup>Klik disini untuk melihat dan mengaturnya!</setup>
+      <use_webint>Menggunakan tampilan antarmuka web</use_webint>
+      <view>(Lihat pada tampilan browser)</view>
+    </web_interface>
+  </id>
   
 </translations>
