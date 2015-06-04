@@ -583,11 +583,14 @@ namespace FTPbox.Forms
 
         private void SetDefaultLocalPath()
         {
-            var account = string.Format("{0}@{1}", Program.Account.Account.Username, Program.Account.Account.Host);
+            
+            //Cambiamos el formato de la carpeta por defecto
+            //var account = string.Format("{0}@{1}", Program.Account.Account.Username, Program.Account.Account.Host);
+            //var account = string.Format("Escloud", Program.Account.Account.Username, Program.Account.Account.Host);
 
             //CAMBIOS: Cambiamos la ruta por defecto
             if (rDefaultLocalFolder.Checked)
-                tLocalPath.Text = string.Format(@"{0}\Escloud\{1}", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), account);
+                tLocalPath.Text = string.Format(@"{0}\Escloud", Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
         }
 
         private void tRemoteList_AfterCheck(object sender, TreeViewEventArgs e)
